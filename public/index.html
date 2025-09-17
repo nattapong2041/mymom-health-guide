@@ -20,6 +20,17 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/app/favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    screens: {
+                        'xs': '475px',
+                    }
+                }
+            }
+        }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -54,13 +65,13 @@
             <h2 class="text-xl md:text-3xl text-[#1D2D44]">สำหรับคุณบังอร</h2>
             
             <!-- FaceTime Call Buttons -->
-            <div class="mt-6 flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div class="mt-6 flex flex-col xs:flex-row gap-3 xs:gap-4 justify-center items-center">
                 <a href="facetime://+66879411488" 
-                   class="inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white font-semibold py-4 px-8 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300 text-lg">
+                   class="inline-flex items-center gap-2 xs:gap-3 bg-green-500 hover:bg-green-600 text-white font-semibold py-3 xs:py-4 px-4 xs:px-6 sm:px-8 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300 text-base xs:text-lg w-full xs:w-auto justify-center">
                     📞 โทรหาต้าร์
                 </a>
                 <a href="facetime://+66958937671" 
-                   class="inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white font-semibold py-4 px-8 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300 text-lg">
+                   class="inline-flex items-center gap-2 xs:gap-3 bg-green-500 hover:bg-green-600 text-white font-semibold py-3 xs:py-4 px-4 xs:px-6 sm:px-8 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300 text-base xs:text-lg w-full xs:w-auto justify-center">
                     📞 โทรหาเค้ก
                 </a>
             </div>
@@ -95,7 +106,7 @@
                     <div class="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
                         <h3 class="font-bold text-xl mb-4 text-[#1D2D44]">🥩 เนื้อสัตว์</h3>
                         <div class="space-y-3">
-                            <p class="flex items-start"><span class="text-green-500 mr-2 text-2xl">✅</span> <strong>กินได้ (จำกัด):</strong> เนื้อปลา, ไข่ขาว, อกไก่, หมูสันใน, ปลาช่อน, ปลากะพง, ปลาดุก, ปลานิล (ปริมาณโปรตีนต้องคุมตามแพทย์/นักกำหนดอาหารกำหนด)</p>
+                            <p class="flex items-start"><span class="text-green-500 mr-2 text-2xl">✅</span> <strong>กินได้ (จำกัด):</strong> เนื้อปลา, ไข่ขาว, อกไก่, หมูสันใน, ปลาช่อน, ปลากะพง, ปลาดุก, ปลานิล (กินรวมกันไม่เกินวันละ 2 ขีด)</p>
                             <p class="flex items-start"><span class="text-yellow-500 mr-2 text-2xl">⚠️</span> <strong>ควรลด:</strong> เนื้อแดง, ของติดมัน, เครื่องใน, กุ้ง, หมึก, หอย, ปู, เป็ด</p>
                             <p class="flex items-start"><span class="text-red-500 mr-2 text-2xl">❌</span> <strong>ห้าม:</strong> ไส้กรอก, หมูยอ, แหนม, กุนเชียง, เบคอน, อาหารแปรรูป</p>
                         </div>
@@ -118,6 +129,42 @@
                             <p class="flex items-start"><span class="text-yellow-500 mr-2 text-2xl">⚠️</span> <strong>ควรลด:</strong> มันฝรั่ง, มะเขือเทศ, หัวปลี, แครอท, ฟักทอง, คะน้า, บรอกโคลี, กะหล่ำดอก, กล้วย, มะพร้าว, ทุเรียน, ลำไย, เงาะ, ขนุน, แก้วมังกร, ผลไม้แห้ง, องุ่น, มังคุด, ลิ้นจี่, ลองกอง</p>
                             <p class="flex items-start"><span class="text-red-500 mr-2 text-2xl">❌</span> <strong>ห้าม:</strong> -</p>
                         </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="daily-protein" class="mb-8">
+                <h2 class="text-xl md:text-2xl font-bold text-center text-[#3A606E] mb-4">เนื้อสัตว์ที่ควรกินต่อวัน</h2>
+                <div class="bg-white rounded-lg shadow-md p-4">
+                    <div class="text-center mb-4">
+                        <div class="bg-green-50 border border-green-200 rounded-lg p-3 mb-4">
+                            <p class="text-base font-semibold text-green-700">กินเนื้อได้วันละ <span class="text-lg font-bold">2 ขีด</span> โดยประมาณ</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                        <div class="bg-blue-50 border border-blue-200 rounded-lg p-3 text-center">
+                            <div class="text-2xl mb-1">🥚</div>
+                            <h4 class="font-bold text-sm text-[#1D2D44] mb-1">ไข่</h4>
+                            <p class="text-xs text-gray-700"><span class="font-semibold text-blue-600">3 ฟอง</span> = เนื้อ 1 ขีด</p>
+                        </div>
+                        
+                        <div class="bg-orange-50 border border-orange-200 rounded-lg p-3 text-center">
+                            <div class="text-2xl mb-1">🧈</div>
+                            <h4 class="font-bold text-sm text-[#1D2D44] mb-1">เต้าหู้หลอด</h4>
+                            <p class="text-xs text-gray-700"><span class="font-semibold text-orange-600">1 หลอด</span> = เนื้อ 1 ขีด</p>
+                        </div>
+                        
+                        <div class="bg-purple-50 border border-purple-200 rounded-lg p-3 text-center">
+                            <div class="text-2xl mb-1">🥛</div>
+                            <h4 class="font-bold text-sm text-[#1D2D44] mb-1">นม</h4>
+                            <p class="text-xs text-gray-700"><span class="font-semibold text-purple-600">2 กล่อง</span> = เนื้อ 1 ขีด</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 bg-yellow-50 border border-yellow-200 rounded-lg p-3">
+                        <h4 class="font-bold text-sm text-[#1D2D44] mb-1">💡 หมายเหตุ</h4>
+                        <p class="text-xs text-gray-700">กินผสมกันได้ เช่น กินไข่ 1 ฟอง + เต้าหู้ ครึ่ง หลอด + นม 1 กล่อง = เนื้อ 1 ขีด</p>
                     </div>
                 </div>
             </section>
