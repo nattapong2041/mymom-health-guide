@@ -15,6 +15,20 @@
         body {
             font-family: 'Kanit', sans-serif;
             background-color: #F0F7F4;
+            color: #1f2937 !important; /* Force text color to stay dark gray */
+        }
+        /* Override any automatic color changes in dark mode */
+        @media (prefers-color-scheme: dark) {
+            body {
+                color: #1f2937 !important; /* Keep the same dark gray color */
+                background-color: #F0F7F4 !important; /* Keep the same light background */
+            }
+            h1, h2, h3, h4, h5, h6 {
+                color: inherit !important; /* Keep heading colors consistent */
+            }
+            p, li, span, div {
+                color: inherit !important; /* Keep all text colors consistent */
+            }
         }
     </style>
 </head>
