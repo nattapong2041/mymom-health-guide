@@ -1,0 +1,16 @@
+{
+  "name": "คู่มือดูแลสุขภาพ: สำหรับคุณบังอร",
+  "short_name": "สุขภาพบังอร",
+  "description": "คู่มือดูแลสุขภาพสำหรับคุณบังอร",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F0F7F4",
+  "theme_color": "#3A606E",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.svg",
+      "sizes": "180x180",
+      "type": "image/svg+xml"
+    }
+  ]
+}
